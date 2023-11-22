@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
+import { buildPlugins } from './config/build/buildPlugins';
 
 const config: webpack.Configuration = {
   mode: 'development',
@@ -26,12 +27,7 @@ const config: webpack.Configuration = {
     clean: true,
   },
 
-  plugins: [
-    new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),
-    }),
-  ],
+  plugins: buildPlugins(),
 };
 
 export default config;

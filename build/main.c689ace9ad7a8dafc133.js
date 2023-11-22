@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"testFunction\": () => (/* binding */ testFunction)\n/* harmony export */ });\nvar testFunction = function (fuu) {\n    console.log('OLOLOLOLO!@#!@#!@#!@#!@#', { fuu: fuu });\n    return '123';\n};\n\n\n//# sourceURL=webpack://learn/./src/test.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   testFunction: () => (/* binding */ testFunction)\n/* harmony export */ });\nvar testFunction = function (fuu) {\n    console.log('OLOLOLOLO!@#!@#!@#!@#!@#', { fuu: fuu });\n    return '123';\n};\n\n\n//# sourceURL=webpack://learn/./src/test.ts?");
 
 /***/ })
 
