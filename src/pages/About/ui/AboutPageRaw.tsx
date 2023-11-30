@@ -1,15 +1,15 @@
 import { FC } from 'react';
 
-import styles from './AboutPage.module.scss';
+import styles from './AboutPageRaw.module.scss';
 
 type AboutPageProps = {
   className?: string;
 };
 
-const AboutPage: FC<AboutPageProps> = (props) => {
+const AboutPageRaw: FC<AboutPageProps> = (props) => {
   const { className } = props;
 
   return <div className={(styles.container, className)}>AboutPage</div>;
 };
 
-export default AboutPage;
+export default AboutPageRaw;

@@ -1,13 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { PATHS } from './constants/constants';
-import { AboutPageLazy } from './pages/About/AboutPage.lazy';
-import { MainPageLazy } from './pages/Main/MainPage.lazy';
 import { Suspense } from 'react';
 
 import './styles/index.scss';
-import { useTheme } from './theme/useTheme';
-import { classNames } from './helpers/classNames';
+import { useTheme } from '@/enteties/hooks';
+import { classNames } from '@/enteties/lib';
+import { PATHS } from '@/enteties/config';
+import { MainPage } from '@/pages/Main/MainPage.lazy';
+import { AboutPage } from '@/pages/About/AboutPage.lazy';
 
 export const App = () => {
   const { theme, toogleTheme } = useTheme();
@@ -21,8 +21,8 @@ export const App = () => {
 
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path={PATHS.about} element={<AboutPageLazy />} />
-          <Route path={PATHS.main} element={<MainPageLazy />} />
+          <Route path={PATHS.main} element={<MainPage />} />
+          <Route path={PATHS.about} element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>

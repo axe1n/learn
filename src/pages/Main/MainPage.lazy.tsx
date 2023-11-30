@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const MainPageLazy = React.lazy(
+const MainPageLazy = React.lazy(
   () =>
     new Promise((resolve) => {
       // @ts-ignore
-      setTimeout(() => resolve(import('./MainPage')), 1500);
+      setTimeout(() => resolve(import('./ui/MainPageRaw')), 1500);
     })
 );
+
+export { MainPageLazy as MainPage };

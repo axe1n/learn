@@ -1,7 +1,6 @@
+import { Themes, defaultTheme } from '@/enteties/config';
+import { ThemeContext } from '@/enteties/model';
 import { FC, useMemo, useState } from 'react';
-import { ThemeContext } from './ThemeContext';
-import { Themes } from '../constants/constants';
-import { defaultTheme } from '../config/config';
 
 export const ThemeProvider: FC = (props) => {
   const { children } = props;
