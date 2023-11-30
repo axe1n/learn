@@ -1,29 +1,29 @@
-import path from 'path';
 import { BuildOptions } from '../types/types';
 import webpack from 'webpack';
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
 import { buildPlugins } from './buildPlugins';
+import { buildDevServer } from './buildDevServer';
 
 export function buildWebpackConfig(
   options: BuildOptions
 ): webpack.Configuration {
-  const { mode, paths } = options;
-  const { entry, build: path, html } = paths;
+  const { mode, paths, isDev } = options;
 
   return {
     mode,
-    entry,
-    module: {
-      rules: buildLoaders(),
-    },
-    resolve: buildResolvers(),
-    devtool: 'inline-source-map',
+    entry: paths.entry,
     output: {
-      path,
+      path: paths.build,
       filename: '[name].[contenthash].js',
       clean: true,
     },
-    plugins: buildPlugins(html),
+    module: {
+      rules: buildLoaders(options),
+    },
+    resolve: buildResolvers(),
+    plugins: buildPlugins(options),
+    devtool: isDev ? 'inline-source-map' : false,
+    devServer: isDev ? buildDevServer(options) : undefined,
   };
 }
