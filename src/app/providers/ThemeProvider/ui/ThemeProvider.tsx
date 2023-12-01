@@ -1,5 +1,5 @@
-import { Themes, defaultTheme } from '@/enteties/config';
-import { ThemeContext } from '@/enteties/model';
+import { Themes, defaultTheme } from '@/entities/config';
+import { ThemeContext } from '@/entities/model';
 import { FC, useMemo, useState } from 'react';
 
 export const ThemeProvider: FC = (props) => {

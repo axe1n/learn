@@ -1,4 +1,4 @@
-import { Themes } from '../../enteties/config/constants';
+import { Themes } from '../../entities/config/constants';
 
 export type ThemeContextType = {
   theme: Themes;
