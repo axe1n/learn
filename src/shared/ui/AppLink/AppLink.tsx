@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
-import { classNames } from '@/entities/lib';
+import { classNames } from '@/shared/lib';
 
 import styles from './AppLink.module.scss';
 import { Link } from 'react-router-dom';

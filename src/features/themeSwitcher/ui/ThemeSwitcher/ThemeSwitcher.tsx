@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { classNames } from '@/entities/lib';
+import { classNames } from '@/shared/lib';
 
 import styles from './ThemeSwitcher.module.scss';
-import { useTheme } from '@/entities/hooks';
-import { Themes } from '@/entities/config';
-import LightIcon from '@/entities/assets/icons/theme-light.svg';
-import DarkIcon from '@/entities/assets/icons/theme-dark.svg';
-import { Button } from '../Button/Button';
+import { useTheme } from '@/shared/hooks';
+import { Themes } from '@/shared/config';
+import LightIcon from '@/shared/assets/icons/theme-light.svg';
+import DarkIcon from '@/shared/assets/icons/theme-light.svg';
+import { Button } from '../../../../shared/ui/Button/Button';
 
 type ThemeSwitcherProps = {
   className?: string;
@@ -14,11 +14,11 @@ type ThemeSwitcherProps = {
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
   const { className } = props;
-  const { theme, toogleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <Button
-      onClick={toogleTheme}
+      onClick={toggleTheme}
       buttonTheme="clear"
       className={classNames(styles.container, {}, [className])}
     >

@@ -1,4 +1,4 @@
-import { AppRoutes, PATHS } from '@/entities/config';
+import { AppRoutes, PATHS } from '@/shared/config';
 import { AboutPage } from '@/pages/About/AboutPage.lazy';
 import { MainPage } from '@/pages/Main/MainPage.lazy';
 import { RouteProps } from 'react-router-dom';

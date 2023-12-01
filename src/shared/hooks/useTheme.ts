@@ -4,7 +4,7 @@ import { ThemeContext } from '../model';
 
 type useThemeType = {
   theme: Themes;
-  toogleTheme: () => void;
+  toggleTheme: () => void;
 };
 
 export const useTheme = (): useThemeType => {
@@ -17,5 +17,5 @@ export const useTheme = (): useThemeType => {
 
     localStorage.setItem(LOCAL_STORAGE_KEY.theme, newTheme);
   };
-  return { theme, toogleTheme };
+  return { theme, toggleTheme: toogleTheme };
 };

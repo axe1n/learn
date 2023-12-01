@@ -5,6 +5,11 @@ export enum Themes {
   LIGHT = 'light',
 }
 
+export enum i18nNamespace {
+  MAIN_PAGE = 'mainPage',
+  ABOUT_PAGE = 'aboutPage',
+}
+
 export const PATHS: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.ABOUT]: '/about',

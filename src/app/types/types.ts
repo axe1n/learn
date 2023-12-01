@@ -1,4 +1,4 @@
-import { Themes } from '../../entities/config/constants';
+import { Themes } from '../../shared/config/constants';
 
 export type ThemeContextType = {
   theme: Themes;
