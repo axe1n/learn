@@ -7,13 +7,20 @@ type ButtonThemeType = 'clear';
 
 type ButtonType = {
   buttonTheme?: ButtonThemeType;
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
 };
 
 type ButtonProps = ButtonType & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { children, buttonTheme, className, ...otherProps } = props;
+  const {
+    children,
+    type = 'button',
+    buttonTheme,
+    className,
+    ...otherProps
+  } = props;
 
   return (
     <button
@@ -21,7 +28,10 @@ export const Button: FC<ButtonProps> = (props) => {
         className,
         styles[buttonTheme],
       ])}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...otherProps}
+      // eslint-disable-next-line react/button-has-type
+      type={type}
     >
       {children}
     </button>

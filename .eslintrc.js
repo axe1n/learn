@@ -26,9 +26,15 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react'],
   rules: {
-    'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: [2, 'always'],
     'react/react-in-jsx-scope': 'off',
+    'react/button-has-type': 'error',
+    'react/jsx-props-no-spreading': 'error',
+    'no-undef': 'error',
+  },
+  globals: {
+    __IS_DEV__: true,
+    __dirname: true,
   },
 };

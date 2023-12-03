@@ -11,6 +11,5 @@ export const classNames = (
     ...Object.entries(mods)
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .filter(([style, value]) => Boolean(value))
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      .map(([style, value]) => style),
+      .map(([style]) => style),
   ].join(' ');

@@ -26,7 +26,9 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         [className]
       )}
     >
-      <button onClick={onToogle}>TOOGLE</button>
+      <button onClick={onToogle} type="button">
+        TOOGLE
+      </button>
 
       <div className={classNames(styles.switchers)}>
         <LanguageSwitcher />
