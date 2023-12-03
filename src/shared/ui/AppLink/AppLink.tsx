@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { classNames } from '@/shared/lib';
 
 import styles from './AppLink.module.scss';

@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPageLazy = React.lazy(
   () =>
     new Promise((resolve) => {
-      // @ts-ignore
+      // @ts-expect-error temporaly solution
       setTimeout(() => resolve(import('./ui/AboutPageRaw')), 1500);
     })
 );

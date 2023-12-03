@@ -10,7 +10,6 @@ type MainPageProps = {
 
 const MainPageRaw: FC<MainPageProps> = (props) => {
   const { className } = props;
-
   const { t } = useTranslation(i18nNamespace.MAIN_PAGE);
 
   return (
