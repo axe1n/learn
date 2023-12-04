@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "string-quotes": "single",
+    "color-hex-length": "long",
+    "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9]*$",
+    "no-empty-source": null
+  }
+}
