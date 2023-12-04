@@ -33,7 +33,13 @@ module.exports = {
     'react/button-has-type': 'error',
     'react/jsx-props-no-spreading': 'error',
     'no-undef': 'error',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['linkType'],
+      },
+    ],
     'import/order': [
       'error',
       {
