@@ -1,6 +1,7 @@
+import { FC, useMemo, useState } from 'react';
+
 import { Themes, defaultTheme } from '@/shared/config';
 import { ThemeContext } from '@/shared/model';
-import { FC, useMemo, useState } from 'react';
 
 export const ThemeProvider: FC = (props) => {
   const { children } = props;

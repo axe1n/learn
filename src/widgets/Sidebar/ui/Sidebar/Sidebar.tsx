@@ -1,9 +1,11 @@
 import { FC, useState } from 'react';
+
 import { classNames } from '@/shared/lib';
 
-import styles from './Sidebar.module.scss';
-import { ThemeSwitcher } from '@/features/themeSwitcher';
 import { LanguageSwitcher } from '@/features/languageSwitcher';
+import { ThemeSwitcher } from '@/features/themeSwitcher';
+
+import styles from './Sidebar.module.scss';
 
 type SidebarProps = {
   className?: string;

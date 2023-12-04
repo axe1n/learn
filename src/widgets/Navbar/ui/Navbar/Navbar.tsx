@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { classNames } from '@/shared/lib';
 
 import { PATHS } from '@/shared/config';
+import { classNames } from '@/shared/lib';
+import { Link } from '@/shared/ui';
 
 import styles from './Navbar.module.scss';
-import { Link } from '@/shared/ui';
 
 type NavbarProps = {
   className?: string;

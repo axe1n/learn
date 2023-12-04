@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
+
 import { classNames } from '@/shared/lib';
 
 import styles from './AppLink.module.scss';
-import { Link } from 'react-router-dom';
 
 type LinkType = 'primary' | 'inverted';
 

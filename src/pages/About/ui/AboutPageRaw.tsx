@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { i18nNamespace } from '@/shared/config';
 
 import styles from './AboutPageRaw.module.scss';
-import { useTranslation } from 'react-i18next';
-import { i18nNamespace } from '@/shared/config';
 
 type AboutPageProps = {
   className?: string;

@@ -1,12 +1,15 @@
 import { FC } from 'react';
+
+import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
+import LightIcon from '@/shared/assets/icons/theme-light.svg';
+import { Themes } from '@/shared/config';
+import { useTheme } from '@/shared/hooks';
 import { classNames } from '@/shared/lib';
 
-import styles from './ThemeSwitcher.module.scss';
-import { useTheme } from '@/shared/hooks';
-import { Themes } from '@/shared/config';
-import LightIcon from '@/shared/assets/icons/theme-light.svg';
-import DarkIcon from '@/shared/assets/icons/theme-dark.svg';
 import { Button } from '../../../../shared/ui/Button/Button';
+
+import styles from './ThemeSwitcher.module.scss';
+
 
 type ThemeSwitcherProps = {
   className?: string;
