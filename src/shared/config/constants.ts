@@ -13,6 +13,7 @@ export enum i18nNamespace {
 export const PATHS: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.ABOUT]: '/about',
+  [AppRoutes.NOT_FOUND]: '/*',
 };
 
 export const LOCAL_STORAGE_KEY = {
