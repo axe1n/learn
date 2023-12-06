@@ -1,4 +1,8 @@
 {
   "languageSwitcher.language": "Ру",
-  "notFoundPage.pageNotFound": "Страница не найдена"
+  "notFoundPage.pageNotFound": "Страница не найдена",
+  "pageError.somethingWentWrong": "Что-то пошло не так",
+  "pageError.reloadPage": "Перезагрузить страницу",
+  "bugButton.errorMessage": "Сообщение об ошибке",
+  "bugButton.bug": "Ошибка"
 }

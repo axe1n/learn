@@ -2,6 +2,10 @@
   "aboutPage": {
     "aboutPage": "aboutPage"
   },
+  "bugButton": {
+    "bug": "bug",
+    "errorMessage": "errorMessage"
+  },
   "languageSwitcher": {
     "language": "language"
   },
@@ -10,5 +14,9 @@
   },
   "notFoundPage": {
     "pageNotFound": "pageNotFound"
+  },
+  "pageError": {
+    "reloadPage": "reloadPage",
+    "somethingWentWrong": "somethingWentWrong"
   }
 }

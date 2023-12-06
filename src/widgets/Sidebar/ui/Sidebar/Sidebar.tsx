@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 
 import { classNames } from '@/shared/lib';
+import { BugButton } from '@/shared/ui';
 
 import { LanguageSwitcher } from '@/features/languageSwitcher';
 import { ThemeSwitcher } from '@/features/themeSwitcher';
@@ -33,6 +34,8 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       </button>
 
       <div className={classNames(styles.switchers)}>
+        <BugButton />
+
         <LanguageSwitcher />
 
         <ThemeSwitcher />

@@ -1,4 +1,8 @@
 {
   "languageSwitcher.language": "En",
-  "notFoundPage.pageNotFound": "Page not found"
+  "notFoundPage.pageNotFound": "Page not found",
+  "pageError.somethingWentWrong": "Something went wrong",
+  "pageError.reloadPage": "Reload page",
+  "bugButton.bug": "Bug",
+  "bugButton.errorMessage": "Error message"
 }
