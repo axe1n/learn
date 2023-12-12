@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 import { classNames } from '@/shared/lib';
-import { BugButton } from '@/shared/ui';
+import { BugButton, Button } from '@/shared/ui';
 
 import { LanguageSwitcher } from '@/features/languageSwitcher';
 import { ThemeSwitcher } from '@/features/themeSwitcher';
@@ -28,10 +28,11 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         { [styles.collapsed]: collapser },
         [className]
       )}
+      data-testid="sidebar"
     >
-      <button onClick={onToogle} type="button">
+      <Button onClick={onToogle} type="button" data-testid="sidebar-toggle">
         TOOGLE
-      </button>
+      </Button>
 
       <div className={classNames(styles.switchers)}>
         <BugButton />
