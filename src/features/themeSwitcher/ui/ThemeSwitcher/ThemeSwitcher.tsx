@@ -5,11 +5,9 @@ import LightIcon from '@/shared/assets/icons/theme-light.svg';
 import { Themes } from '@/shared/config';
 import { useTheme } from '@/shared/hooks';
 import { classNames } from '@/shared/lib';
-
-import { Button } from '../../../../shared/ui/Button/Button';
+import { Button } from '@/shared/ui';
 
 import styles from './ThemeSwitcher.module.scss';
-
 
 type ThemeSwitcherProps = {
   className?: string;

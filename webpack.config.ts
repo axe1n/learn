@@ -30,7 +30,5 @@ export default (env: BuildEnv) => {
     port: PORT,
   });
 
-  console.log('mode: ', mode);
-
   return config;
 };

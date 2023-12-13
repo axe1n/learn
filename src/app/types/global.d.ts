@@ -12,7 +12,6 @@ declare module '*.svg' {
   export default SVG;
 }
 
-declare module '*.svg';
 declare module '*.png';
 declare module '*.jpeg';
 declare module '*.jpg';

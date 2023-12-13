@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib';
 
 import styles from './Button.module.scss';
 
-type ButtonThemeType = 'clear';
+type ButtonThemeType = 'clear' | 'outline';
 
 type ButtonType = {
   buttonTheme?: ButtonThemeType;

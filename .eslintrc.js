@@ -9,6 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:i18next/recommended',
+    'plugin:storybook/recommended',
   ],
   overrides: [
     {
@@ -38,6 +39,7 @@ module.exports = {
     'react/button-has-type': 'error',
     'react/jsx-props-no-spreading': 'error',
     'no-undef': 'error',
+    'no-console': 'error',
     'i18next/no-literal-string': [
       'error',
       {

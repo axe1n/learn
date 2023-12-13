@@ -8,7 +8,7 @@ import { Sidebar } from '@/widgets/Sidebar';
 
 import { AppRouter } from './providers/router/AppRouter';
 
-import './index.scss';
+import '@/shared/styles/styles.scss';
 
 export const App = () => {
   const { theme } = useTheme();
