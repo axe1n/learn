@@ -16,7 +16,7 @@ export const NotFoundPage: FC<NotFoundPageProps> = (props) => {
 
   return (
     <div className={classNames(styles.container, {}, [className])}>
-      {t('notFoundPage.pageNotFound')}
+      {t('notFoundPage.pageNotFound', 'Page not found')}
     </div>
   );
 };

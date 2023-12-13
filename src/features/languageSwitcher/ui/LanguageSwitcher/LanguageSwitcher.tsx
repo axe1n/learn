@@ -25,7 +25,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = (props) => {
       buttonTheme="clear"
       className={classNames(styles.container, {}, [className])}
     >
-      {t('languageSwitcher.language')}
+      {t('languageSwitcher.language', 'En')}
     </Button>
   );
 };

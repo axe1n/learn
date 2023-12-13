@@ -15,7 +15,7 @@ const MainPageRaw: FC<MainPageProps> = (props) => {
 
   return (
     <div className={(styles.container, className)}>
-      {t('mainPage.mainPage')}
+      {t('mainPage.mainPage', 'Main page')}
     </div>
   );
 };

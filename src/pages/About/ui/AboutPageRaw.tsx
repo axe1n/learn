@@ -16,7 +16,7 @@ const AboutPageRaw: FC<AboutPageProps> = (props) => {
 
   return (
     <div className={(styles.container, className)}>
-      {t('aboutPage.aboutPage')}
+      {t('aboutPage.aboutPage', 'About page')}
     </div>
   );
 };

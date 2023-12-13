@@ -15,9 +15,9 @@ export const BugButton: FC = () => {
 
   useEffect(() => {
     if (isError) {
-      throw new Error(prompt(t('bugButton.errorMessage')));
+      throw new Error(prompt(t('bugButton.errorMessage', 'Error message')));
     }
   }, [isError]);
 
-  return <Button onClick={throwBug}>{t('bugButton.bug')}</Button>;
+  return <Button onClick={throwBug}>{t('bugButton.bug', 'Bug')}</Button>;
 };
