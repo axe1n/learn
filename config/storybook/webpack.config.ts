@@ -2,10 +2,15 @@ import path from 'path';
 
 import webpack from 'webpack';
 
-import { buildCssLoader } from '../../config/build/loaders/buildCssLoaders';
+import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../types/types';
 
+import { storybookBabelLoader, storybookSvgLoader } from './loaders';
+
 export default ({ config }: { config: webpack.Configuration }) => {
+  const configResolve = config.resolve;
+  const rules = config.module.rules;
+
   const paths: BuildPaths = {
     build: '',
     html: '',
@@ -13,11 +18,26 @@ export default ({ config }: { config: webpack.Configuration }) => {
     src: path.resolve(__dirname, '../../src'),
   };
 
-  config.resolve.modules.push(paths.src);
+  rules.push(
+    buildCssLoader(true),
+    storybookBabelLoader,
+    storybookSvgLoader(rules)
+  );
 
-  config.resolve.extensions.push('.ts', '.tsx');
+  configResolve.modules.push(paths.src);
 
-  config.module.rules.push(buildCssLoader(true));
+  configResolve.extensions.push('.ts', '.tsx');
+
+  configResolve.alias = {
+    ...config.resolve.alias,
+    '@': path.resolve(__dirname, '../../src'),
+  };
+
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      __IS_DEV__: true,
+    })
+  );
 
   return config;
 };

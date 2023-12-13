@@ -2,7 +2,7 @@ import webpack from 'webpack';
 
 import { BuildOptions } from '../types/types';
 
-import { buildCssLoader } from './loaders/buildCssLoaders';
+import { buildCssLoader, buildSvgLoader } from './loaders';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
@@ -13,11 +13,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  const svgLoader = {
-    test: /\.svg$/,
-    use: ['@svgr/webpack'],
-  };
-
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2)$/i,
     use: [
@@ -26,8 +21,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
       },
     ],
   };
-
-  const cssLoader = buildCssLoader(isDev);
 
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,
@@ -46,5 +39,11 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     },
   };
 
-  return [fileLoader, svgLoader, babelLoader, typeScriptLoader, cssLoader];
+  return [
+    fileLoader,
+    buildSvgLoader(),
+    babelLoader,
+    typeScriptLoader,
+    buildCssLoader(isDev),
+  ];
 }
