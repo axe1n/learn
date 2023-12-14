@@ -5,7 +5,7 @@ import webpack from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../types/types';
 
-import { storybookBabelLoader, storybookSvgLoader } from './loaders/index';
+import { storybookBabelLoader, storybookSvgLoader } from './loaders';
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const configResolve = config.resolve;
