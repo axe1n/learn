@@ -11,19 +11,7 @@ export function buildPlugins(
 ): webpack.WebpackPluginInstance[] {
   const { paths, isDev } = options;
 
-  const reactRefreshAndWebpackRefrashPlugin = isDev
-    ? [
-        new webpack.HotModuleReplacementPlugin(),
-
-        new ReactRefreshWebpackPlugin(),
-
-        new BundleAnalyzerPlugin({
-          openAnalyzer: false,
-        }),
-      ]
-    : [];
-
-  return [
+  const plugins = [
     new webpack.ProgressPlugin(),
 
     new HtmlWebpackPlugin({
@@ -38,7 +26,17 @@ export function buildPlugins(
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-
-    ...reactRefreshAndWebpackRefrashPlugin,
   ];
+
+  if (isDev) {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new ReactRefreshWebpackPlugin());
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
+    );
+  }
+
+  return plugins;
 }

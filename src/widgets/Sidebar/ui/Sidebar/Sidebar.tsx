@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib';
 import { BugButton, Button } from '@/shared/ui';
@@ -14,6 +15,7 @@ type SidebarProps = {
 
 export const Sidebar: FC<SidebarProps> = (props) => {
   const { className } = props;
+  const { t } = useTranslation();
 
   const [collapser, setCollapsed] = useState(false);
 
@@ -31,7 +33,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       data-testid="sidebar"
     >
       <Button onClick={onToogle} type="button" data-testid="sidebar-toggle">
-        TOOGLE
+        {t('sidebar.toogle', 'Toogle')}
       </Button>
 
       <div className={classNames(styles.switchers)}>
