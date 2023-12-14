@@ -14,16 +14,17 @@ export function buildPlugins(
   const reactRefreshAndWebpackRefrashPlugin = isDev
     ? [
         new webpack.HotModuleReplacementPlugin(),
+
         new ReactRefreshWebpackPlugin(),
+
+        new BundleAnalyzerPlugin({
+          openAnalyzer: false,
+        }),
       ]
     : [];
 
   return [
     new webpack.ProgressPlugin(),
-
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
 
     new HtmlWebpackPlugin({
       template: paths.html,
@@ -37,10 +38,6 @@ export function buildPlugins(
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-
-    new webpack.HotModuleReplacementPlugin(),
-
-    new ReactRefreshWebpackPlugin(),
 
     ...reactRefreshAndWebpackRefrashPlugin,
   ];
