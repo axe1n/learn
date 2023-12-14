@@ -35,7 +35,7 @@
 
   &::after {
     animation: l9 1s infinite;
-    transform: perspective(300px) translateZ(0px);
+    transform: perspective(300px) translateZ(0);
   }
 
   @keyframes l9 {
