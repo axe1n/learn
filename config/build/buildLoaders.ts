@@ -2,7 +2,8 @@ import webpack from 'webpack';
 
 import { BuildOptions } from '../types/types';
 
-import { buildCssLoader, buildSvgLoader } from './loaders';
+import { buildCssLoader } from './loaders/buildCssLoader';
+import { buildSvgLoader } from './loaders/buildSvgLoader';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
