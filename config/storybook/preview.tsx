@@ -1,7 +1,11 @@
-import type { Preview, StoryFn } from '@storybook/react';
-import { Suspense } from 'react';
+import type { Preview } from '@storybook/react';
 
 import '@/shared/styles/styles.scss';
+import {
+  RouterDecorator,
+  StylesDecorator,
+  SuspenseDecorator,
+} from '@/shared/storybook';
 
 const preview: Preview = {
   parameters: {
@@ -26,15 +30,7 @@ const preview: Preview = {
       ],
     },
   },
-  decorators: [
-    (Story: StoryFn) => (
-      <Suspense fallback="">
-        <div className="app light">
-          <Story />
-        </div>
-      </Suspense>
-    ),
-  ],
+  decorators: [SuspenseDecorator, RouterDecorator, StylesDecorator],
 };
 
 export default preview;

@@ -4,7 +4,7 @@ const AboutPageLazy = React.lazy(
   () =>
     new Promise((resolve) => {
       // @ts-expect-error temporaly solution
-      setTimeout(() => resolve(import('./ui/AboutPageRaw')), 1500);
+      setTimeout(() => resolve(import('./ui/AboutPage')), 1500);
     })
 );
 

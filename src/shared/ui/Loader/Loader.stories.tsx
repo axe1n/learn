@@ -2,17 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { DarkThemeDecorator } from '@/shared/storybook';
 
-import { Sidebar } from './Sidebar';
+import { Loader } from './Loader';
 
 const meta = {
-  title: 'widget/Sidebar',
-  component: Sidebar,
+  title: 'shared/Loader',
+  component: Loader,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Sidebar>;
+} satisfies Meta<typeof Loader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

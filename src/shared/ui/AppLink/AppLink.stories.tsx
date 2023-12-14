@@ -2,18 +2,21 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { DarkThemeDecorator } from '@/shared/storybook';
 
-import { Button } from './Button';
+import { AppLink } from './AppLink';
 
 const meta = {
-  title: 'shared/Button',
-  component: Button,
+  title: 'shared/Link',
+  component: AppLink,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {},
-  args: { children: 'Button' },
-} satisfies Meta<typeof Button>;
+  args: {
+    to: '',
+    children: 'ololo',
+  },
+} satisfies Meta<typeof AppLink>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,15 +25,9 @@ export const Default: Story = {
   args: {},
 };
 
-export const Clear: Story = {
+export const Inverted: Story = {
   args: {
-    buttonTheme: 'clear',
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    buttonTheme: 'outline',
+    linkType: 'inverted',
   },
 };
 
@@ -39,16 +36,9 @@ export const DefaultDark: Story = {
   decorators: [DarkThemeDecorator],
 };
 
-export const ClearDark: Story = {
+export const InvertedDark: Story = {
   args: {
-    buttonTheme: 'clear',
-  },
-  decorators: [DarkThemeDecorator],
-};
-
-export const OutlineDark: Story = {
-  args: {
-    buttonTheme: 'outline',
+    linkType: 'inverted',
   },
   decorators: [DarkThemeDecorator],
 };

@@ -2,17 +2,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { DarkThemeDecorator } from '@/shared/storybook';
 
-import { Sidebar } from './Sidebar';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 const meta = {
-  title: 'widget/Sidebar',
-  component: Sidebar,
-  parameters: {
-    layout: 'centered',
-  },
+  title: 'feature/ThemeSwitcher',
+  component: ThemeSwitcher,
+  parameters: {},
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Sidebar>;
+} satisfies Meta<typeof ThemeSwitcher>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
