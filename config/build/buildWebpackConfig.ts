@@ -27,5 +27,9 @@ export function buildWebpackConfig(
     plugins: buildPlugins(options),
     devtool: isDev ? 'inline-source-map' : false,
     devServer: isDev ? buildDevServer(options) : undefined,
+    // NOTE: remove later
+    performance: {
+      hints: false,
+    },
   };
 }
