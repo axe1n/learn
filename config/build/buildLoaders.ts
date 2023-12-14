@@ -1,9 +1,7 @@
 import webpack from 'webpack';
 
 import { BuildOptions } from '../types/types';
-
-import { buildCssLoader } from './loaders/buildCssLoader';
-import { buildSvgLoader } from './loaders/buildSvgLoader';
+import { buildCssLoader, buildSvgLoader } from './loaders';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
@@ -40,8 +38,11 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     },
   };
 
-  const svgLoader = buildSvgLoader();
-  const cssLoader = buildCssLoader(isDev);
-
-  return [fileLoader, svgLoader, babelLoader, typeScriptLoader, cssLoader];
+  return [
+    fileLoader,
+    buildSvgLoader(),
+    babelLoader,
+    typeScriptLoader,
+    buildCssLoader(isDev),
+  ];
 }
